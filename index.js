@@ -18,7 +18,7 @@ function postUser(userObj) {
         body: JSON.stringify(userObj)
     })
         .then(resp => resp.json())
-        .then(userObj => renderUser(userObj))
+        .then(userObj => handleNewUser(userObj))
 }
 
 // Global variables
@@ -28,6 +28,13 @@ const btn = document.querySelector('#generate')
 btn.addEventListener('click', getUser)
 
 // Handlers
+function handleNewUser(userObj) {
+    renderMainUser(userObj)
+    // MAX: addToUserList will render each new user in list at bottom
+    // is declared below but empty
+    addToUserList(userObj)
+}
+
 function handleData(dataObj) {
     const user = {
         name: dataObj.name,
@@ -50,7 +57,7 @@ function makeDate(date) {
 }
 
 // Renders
-function renderUser(userObj) {
+function renderMainUser(userObj) {
     console.log(userObj)
     const container = document.querySelector('#licence-container')
     console.log(container)
@@ -68,6 +75,11 @@ function renderUser(userObj) {
     dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
     container.append(name, location, img, gender, dob, cell)
 }
+
+function addToUserList(userObj) {
+    
+}
+
 // Hello
 
 
