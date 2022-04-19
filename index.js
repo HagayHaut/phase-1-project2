@@ -74,3 +74,5 @@ function renderUser(userObj) {
 // const img = document.createElement('img')
 // img.src = 'https://100k-faces.glitch.me/random-image'
 // document.querySelector('body').append(img)
+
+// Comment for demo
