@@ -475,6 +475,40 @@
       "cell": "421-391-1430",
       "image": "https://100k-faces.glitch.me/random-image",
       "id": 14
+    },
+    {
+      "name": {
+        "title": "Ms",
+        "first": "Grace",
+        "last": "Patel"
+      },
+      "dob": {
+        "date": "1962-01-10T08:14:14.952Z",
+        "age": 60
+      },
+      "email": "grace.patel@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 3067,
+          "name": "Worcester Street"
+        },
+        "city": "Rotorua",
+        "state": "Gisborne",
+        "country": "New Zealand",
+        "postcode": 35951,
+        "coordinates": {
+          "latitude": "64.9670",
+          "longitude": "139.7866"
+        },
+        "timezone": {
+          "offset": "-7:00",
+          "description": "Mountain Time (US & Canada)"
+        }
+      },
+      "cell": "(804)-867-8924",
+      "image": "https://100k-faces.glitch.me/random-image",
+      "id": 15
     }
   ]
 }

@@ -42,9 +42,11 @@ function handleData(dataObj) {
 }
 
 // prints date from date instance
-function makeDate(date, strDate) {
-    const days = strDate.substr(8, 2)
-    return `${date.getMonth()+1}/${days}/${date.getYear()}`
+function makeDate(date) {
+    const days = date.substr(8, 2)
+    const year = date.substr(0,4)
+    const month = date.substr(5,2)
+    return `${month}/${days}/${year}`
 }
 
 // Renders
@@ -63,7 +65,7 @@ function renderUser(userObj) {
     const cell = document.createElement('p')
     cell.textContent = `Cell: ${userObj.cell}`
     const dob = document.createElement('p')
-    dob.textContent = `DOB: ${makeDate(new Date(userObj.dob.date), userObj.dob.date)}`
+    dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
     container.append(name,location,img,gender,dob,cell)
 }
 
