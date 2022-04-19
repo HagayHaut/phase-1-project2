@@ -3,8 +3,8 @@
 // GET request
 function getUser() {
     fetch('https://randomuser.me/api/')
-    .then(resp => resp.json())
-    .then(data => handleData(data.results[0]))
+        .then(resp => resp.json())
+        .then(data => handleData(data.results[0]))
 }
 
 // POST request
@@ -44,8 +44,8 @@ function handleData(dataObj) {
 // prints date from date instance
 function makeDate(date) {
     const days = date.substr(8, 2)
-    const year = date.substr(0,4)
-    const month = date.substr(5,2)
+    const year = date.substr(0, 4)
+    const month = date.substr(5, 2)
     return `${month}/${days}/${year}`
 }
 
@@ -66,8 +66,9 @@ function renderUser(userObj) {
     cell.textContent = `Cell: ${userObj.cell}`
     const dob = document.createElement('p')
     dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
-    container.append(name,location,img,gender,dob,cell)
+    container.append(name, location, img, gender, dob, cell)
 }
+// Hello
 
 
 
