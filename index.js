@@ -54,18 +54,18 @@ function handleData(dataObj) {
     fetch('https://fakeface.rest/face/json')
         .then(resp => resp.json())
         .then(data => {
+            // console.log(data)
             const user = {
                 name: dataObj.name,
                 dob: dataObj.dob,
                 email: dataObj.email,
-                gender: dataObj.gender,
+                gender: data.gender,
                 location: dataObj.location,
                 cell: dataObj.cell,
                 image: data.image_url
             }
             postUser(user)
         })
-
 }
 
 
