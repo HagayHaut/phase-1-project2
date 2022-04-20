@@ -91,20 +91,33 @@ function addToUserList(userObj) {
     console.log(userObj)
     const container = document.querySelector('#bottom-container')
     const card = document.createElement('div')
+    card.className = 'card'
     const div = document.createElement('div')
     const img = document.createElement('img')
+    const name = document.createElement('h4')
+    const info = document.createElement('div')
+    info.innerHTML = `<p>Gender: ${userObj.gender}</p><p>DOB: ${makeDate(userObj.dob.date)}</p><p>Cell: ${userObj.cell}</p>`
+    info.style.display = 'none'
+    name.textContent = `${userObj.name.first} ${userObj.name.last}`
     img.src = userObj.image
     const p = document.createElement('p')
     p.textContent = `${userObj.location.city}, ${userObj.location.country}`
-    card.addEventListener('mouseover', () => showDetail(userObj))
-    div.append(p)
+    // card.addEventListener('onmouseover', () => showCardDetail(info))
+    // card.addEventListener('onmouseout', () => hideCardDetail(info))
+    card.onmouseover = () => info.style.display = 'block';
+    card.onmouseout = () => info.style.display = 'none';
+    div.append(name,p,info)
     card.append(div,img)
-    container.append(card)
+    container.prepend(card)
 }
 
-function showDetail(userObj) {
+// function showCardDetail(info) {
+//     info.style.display = 'block'
+// }
 
-}
+// function hideCardDetail(info) {
+//     info.style.display = 'none'
+// }
 
 // Hello
 // Bye
