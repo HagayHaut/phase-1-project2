@@ -37,18 +37,51 @@ function deleteRequest(card) {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
-        }})
+        }
+    })
         .then(resp => resp.json())
         .then(data => {
             card.remove()
         })
 }
 
+// Handles delete all button event
+function deleteAllRequest(e) {
+
+    // Get all current users, store their ids in an array
+    const ids = []
+    fetch('http://localhost:3000/users')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(userObj => {
+                ids.push(userObj.id)
+            })
+
+            // Iterate through ids, delete from server using ids
+            ids.forEach(id => {
+                fetch(`http://localhost:3000/users/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(res => res.json())
+                    .then(data => data)
+            })
+            // optimistically delete contents of containers on 
+            document.querySelector('#bottom-container').innerHTML = ''
+            document.querySelector('#licence-container').innerHTML = ''
+        })
+}
+
 // Global variables
 const btn = document.querySelector('#generate')
+const deleteAllBtn = document.querySelector('#deleteAll')
 
 // Global event listeners
 btn.addEventListener('click', getUser)
+deleteAllBtn.addEventListener('click', deleteAllRequest)
+
 
 // Handlers
 // takes in response from db.json
@@ -152,7 +185,7 @@ function addToUserList(userObj) {
     card.addEventListener('dragstart', dragStart)
     card.addEventListener('dragend', dragEnd)
     //append
-    div.append(name, trash,p, info)
+    div.append(name, trash, p, info)
     card.append(div, img)
     card.draggable = 'false'
     container.prepend(card)
