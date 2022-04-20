@@ -8,6 +8,11 @@ function getUser() {
         .then(data => handleData(data.results[0]))
 }
 
+// GET users from db.json for bottom list
+fetch('http://localhost:3000/users')
+    .then(resp => resp.json())
+    .then(data => handleUserList(data))
+
 // POST request
 // post user data in db.json
 // pessimistically send response data to handleNewUser
@@ -24,6 +29,21 @@ function postUser(userObj) {
         .then(userObj => handleNewUser(userObj))
 }
 
+// DELETE request
+function deleteRequest(card) {
+    const id = card.querySelector('img').id
+    console.log(id)
+    fetch(`http://localhost:3000/users/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }})
+        .then(resp => resp.json())
+        .then(data => {
+            card.remove()
+        })
+}
+
 // Global variables
 const btn = document.querySelector('#generate')
 
@@ -35,9 +55,11 @@ btn.addEventListener('click', getUser)
 // pessimistically renders in top and bottom container
 function handleNewUser(userObj) {
     renderMainUser(userObj)
-    // MAX: addToUserList will render each new user in list at bottom
-    // is declared below but empty
     addToUserList(userObj)
+}
+
+function handleUserList(userArray) {
+    userArray.forEach(userObj => addToUserList(userObj))
 }
 
 // Recieves data from API fetch
@@ -48,18 +70,18 @@ function handleData(dataObj) {
     fetch('https://fakeface.rest/face/json')
         .then(resp => resp.json())
         .then(data => {
+            console.log(data)
             const user = {
                 name: dataObj.name,
                 dob: dataObj.dob,
                 email: dataObj.email,
-                gender: dataObj.gender,
+                gender: data.gender,
                 location: dataObj.location,
                 cell: dataObj.cell,
                 image: data.image_url
             }
             postUser(user)
         })
-
 }
 
 
@@ -99,25 +121,49 @@ function renderMainUser(userObj) {
 // Adds rendered card to bottom container
 // Adds mouse events to each card
 function addToUserList(userObj) {
-    console.log(userObj)
+    // variables
     const container = document.querySelector('#bottom-container')
     const card = document.createElement('div')
-    card.className = 'card'
     const div = document.createElement('div')
     const img = document.createElement('img')
     const name = document.createElement('h4')
     const info = document.createElement('div')
+    const trash = document.createElement('img')
+    // styles and classes
+    card.className = 'card'
+    trash.id = userObj.id
+    trash.style.width = '50px'
+    trash.style.height = 'auto'
+    trash.className = 'trash'
+    trash.style.position = 'absolute'
+    trash.style.right = '4px'
+    trash.style.top = '6px'
+    trash.src = 'https://i.redd.it/k15gv84q33441.png';
     info.innerHTML = `<p>Gender: ${userObj.gender}</p><p>DOB: ${makeDate(userObj.dob.date)}</p><p>Cell: ${userObj.cell}</p>`
     info.style.display = 'none'
     name.textContent = `${userObj.name.first} ${userObj.name.last}`
     img.src = userObj.image
     const p = document.createElement('p')
     p.textContent = `${userObj.location.city}, ${userObj.location.country}`
-    // card.addEventListener('onmouseover', () => showCardDetail(info))
-    // card.addEventListener('onmouseout', () => hideCardDetail(info))
+    // events
+    trash.onclick = (e) => deleteRequest(e.target.parentNode.parentNode)
     card.onmouseover = () => info.style.display = 'block';
     card.onmouseout = () => info.style.display = 'none';
-    div.append(name, p, info)
+    card.addEventListener('dragstart', dragStart)
+    card.addEventListener('dragend', dragEnd)
+    //append
+    div.append(name, trash,p, info)
     card.append(div, img)
+    card.draggable = 'false'
     container.prepend(card)
+}
+
+// Drag event callbacks
+function dragStart(e) {
+    this.className += ' hold';
+    // this.style.display = 'none'
+}
+
+function dragEnd(e) {
+    console.log('end')
 }
