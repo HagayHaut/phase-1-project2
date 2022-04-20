@@ -1,3 +1,446 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Lewis",
+        "last": "Williamson"
+      },
+      "dob": {
+        "date": "1955-12-30T10:48:45.501Z",
+        "age": 67
+      },
+      "email": "lewis.williamson@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 4553,
+          "name": "Wheeler Ridge Dr"
+        },
+        "city": "Toowoomba",
+        "state": "Western Australia",
+        "country": "Australia",
+        "postcode": 9234,
+        "coordinates": {
+          "latitude": "-87.3225",
+          "longitude": "-96.9901"
+        },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "cell": "0450-820-079",
+      "image": "https://content.fakeface.rest/male_29_541fabd5a957464cf0315e79cbfcaa7f2dd4876d.jpg",
+      "id": 1
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Viveque",
+        "last": "Campos"
+      },
+      "dob": {
+        "date": "1982-05-04T08:44:44.017Z",
+        "age": 40
+      },
+      "email": "viveque.campos@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 8279,
+          "name": "Rua João Xxiii"
+        },
+        "city": "Mogi Guaçu",
+        "state": "Distrito Federal",
+        "country": "Brazil",
+        "postcode": 76794,
+        "coordinates": {
+          "latitude": "-77.5837",
+          "longitude": "-87.9762"
+        },
+        "timezone": {
+          "offset": "+5:30",
+          "description": "Bombay, Calcutta, Madras, New Delhi"
+        }
+      },
+      "cell": "(39) 9427-8886",
+      "image": "https://content.fakeface.rest/female_28_413863f4bdfe76b17c95a1396f8fabd3fb14f42c.jpg",
+      "id": 2
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Marc",
+        "last": "Oliver"
+      },
+      "dob": {
+        "date": "1973-09-07T00:49:02.228Z",
+        "age": 49
+      },
+      "email": "marc.oliver@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 4111,
+          "name": "Spring Hill Rd"
+        },
+        "city": "Clearwater",
+        "state": "Arizona",
+        "country": "United States",
+        "postcode": 49208,
+        "coordinates": {
+          "latitude": "89.5119",
+          "longitude": "-11.3104"
+        },
+        "timezone": {
+          "offset": "+4:00",
+          "description": "Abu Dhabi, Muscat, Baku, Tbilisi"
+        }
+      },
+      "cell": "(792)-323-2969",
+      "image": "https://content.fakeface.rest/female_20_1867d9fe204af8e67371729ebae27cbdb8ff0485.jpg",
+      "id": 3
+    },
+    {
+      "name": {
+        "title": "Miss",
+        "first": "Victoria",
+        "last": "Molina"
+      },
+      "dob": {
+        "date": "1977-01-13T05:36:51.749Z",
+        "age": 45
+      },
+      "email": "victoria.molina@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 7872,
+          "name": "Calle del Barquillo"
+        },
+        "city": "Guadalajara",
+        "state": "Cataluña",
+        "country": "Spain",
+        "postcode": 48608,
+        "coordinates": {
+          "latitude": "-25.8008",
+          "longitude": "154.6775"
+        },
+        "timezone": {
+          "offset": "0:00",
+          "description": "Western Europe Time, London, Lisbon, Casablanca"
+        }
+      },
+      "cell": "644-843-026",
+      "image": "https://content.fakeface.rest/male_32_3716d2ca4562ecbc6c25528dda7e588cd4216b91.jpg",
+      "id": 4
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Kirk",
+        "last": "Miller"
+      },
+      "dob": {
+        "date": "1971-07-20T20:37:11.482Z",
+        "age": 51
+      },
+      "email": "kirk.miller@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 7384,
+          "name": "Henry Street"
+        },
+        "city": "Carlow",
+        "state": "Kilkenny",
+        "country": "Ireland",
+        "postcode": 74345,
+        "coordinates": {
+          "latitude": "25.5169",
+          "longitude": "-126.6871"
+        },
+        "timezone": {
+          "offset": "-5:00",
+          "description": "Eastern Time (US & Canada), Bogota, Lima"
+        }
+      },
+      "cell": "081-097-0493",
+      "image": "https://content.fakeface.rest/male_29_17788f4cd817296b2df25af860b94dffb1267ccc.jpg",
+      "id": 5
+    },
+    {
+      "name": {
+        "title": "Mrs",
+        "first": "Vicky",
+        "last": "Bell"
+      },
+      "dob": {
+        "date": "1978-06-03T09:14:33.101Z",
+        "age": 44
+      },
+      "email": "vicky.bell@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 9937,
+          "name": "Killarney Road"
+        },
+        "city": "Newcastle West",
+        "state": "Tipperary",
+        "country": "Ireland",
+        "postcode": 85420,
+        "coordinates": {
+          "latitude": "22.8488",
+          "longitude": "176.3014"
+        },
+        "timezone": {
+          "offset": "+5:30",
+          "description": "Bombay, Calcutta, Madras, New Delhi"
+        }
+      },
+      "cell": "081-529-7886",
+      "image": "https://content.fakeface.rest/male_27_cfe027cceb89f62e6ade7175ca87ee4448a88f5a.jpg",
+      "id": 6
+    },
+    {
+      "name": {
+        "title": "Mrs",
+        "first": "Salma",
+        "last": "Arneberg"
+      },
+      "dob": {
+        "date": "1986-03-23T17:18:32.124Z",
+        "age": 36
+      },
+      "email": "salma.arneberg@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 2397,
+          "name": "Bygdøy allé"
+        },
+        "city": "Ålvik",
+        "state": "Hedmark",
+        "country": "Norway",
+        "postcode": "3944",
+        "coordinates": {
+          "latitude": "54.7723",
+          "longitude": "3.2204"
+        },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "cell": "95046964",
+      "image": "https://content.fakeface.rest/male_44_396ffc1131754eb0519ceb8c99a2cfcf3b978cd6.jpg",
+      "id": 7
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Deniz",
+        "last": "Bolatlı"
+      },
+      "dob": {
+        "date": "1990-04-08T02:39:59.065Z",
+        "age": 32
+      },
+      "email": "deniz.bolatli@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 3705,
+          "name": "Kushimoto Sk"
+        },
+        "city": "Yalova",
+        "state": "Çanakkale",
+        "country": "Turkey",
+        "postcode": 82939,
+        "coordinates": {
+          "latitude": "76.9399",
+          "longitude": "-170.8015"
+        },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "cell": "(490)-994-1410",
+      "image": "https://content.fakeface.rest/male_40_65d9c0283f0b266012902bf6461b73e9b1ddb3d7.jpg",
+      "id": 8
+    },
+    {
+      "name": {
+        "title": "Mrs",
+        "first": "Ariana",
+        "last": "King"
+      },
+      "dob": {
+        "date": "1952-09-14T08:01:52.584Z",
+        "age": 70
+      },
+      "email": "ariana.king@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 124,
+          "name": "Botany Road"
+        },
+        "city": "Auckland",
+        "state": "Bay of Plenty",
+        "country": "New Zealand",
+        "postcode": 37295,
+        "coordinates": {
+          "latitude": "67.1121",
+          "longitude": "133.0366"
+        },
+        "timezone": {
+          "offset": "+11:00",
+          "description": "Magadan, Solomon Islands, New Caledonia"
+        }
+      },
+      "cell": "(048)-143-9042",
+      "image": "https://content.fakeface.rest/male_45_6ddd99df7ed9295441a1f326c3102d9194bca481.jpg",
+      "id": 9
+    },
+    {
+      "name": {
+        "title": "Miss",
+        "first": "Angela",
+        "last": "Ferrer"
+      },
+      "dob": {
+        "date": "1964-06-17T07:16:32.742Z",
+        "age": 58
+      },
+      "email": "angela.ferrer@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 7107,
+          "name": "Calle de Argumosa"
+        },
+        "city": "Alcobendas",
+        "state": "Castilla y León",
+        "country": "Spain",
+        "postcode": 17987,
+        "coordinates": {
+          "latitude": "-24.9249",
+          "longitude": "143.1740"
+        },
+        "timezone": {
+          "offset": "+6:00",
+          "description": "Almaty, Dhaka, Colombo"
+        }
+      },
+      "cell": "634-827-658",
+      "image": "https://content.fakeface.rest/female_49_44f98eae64dd333709f5bcb8e17d5422a6c6b0e3.jpg",
+      "id": 10
+    },
+    {
+      "name": {
+        "title": "Miss",
+        "first": "Hilla",
+        "last": "Autio"
+      },
+      "dob": {
+        "date": "1947-12-30T01:37:59.862Z",
+        "age": 75
+      },
+      "email": "hilla.autio@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 6400,
+          "name": "Mechelininkatu"
+        },
+        "city": "Kerava",
+        "state": "South Karelia",
+        "country": "Finland",
+        "postcode": 75380,
+        "coordinates": {
+          "latitude": "-13.5006",
+          "longitude": "130.9890"
+        },
+        "timezone": {
+          "offset": "-8:00",
+          "description": "Pacific Time (US & Canada)"
+        }
+      },
+      "cell": "040-703-09-90",
+      "image": "https://content.fakeface.rest/male_44_db65d71ae8e05b3b4b504b15ec7eda45e3ea95c1.jpg",
+      "id": 11
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Ugo",
+        "last": "Marie"
+      },
+      "dob": {
+        "date": "1997-05-01T06:21:32.533Z",
+        "age": 25
+      },
+      "email": "ugo.marie@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 5788,
+          "name": "Place de L'Abbé-Franz-Stock"
+        },
+        "city": "Poitiers",
+        "state": "Lozère",
+        "country": "France",
+        "postcode": 36741,
+        "coordinates": {
+          "latitude": "1.1401",
+          "longitude": "-92.6660"
+        },
+        "timezone": {
+          "offset": "-2:00",
+          "description": "Mid-Atlantic"
+        }
+      },
+      "cell": "06-93-25-47-33",
+      "image": "https://content.fakeface.rest/female_24_e5887d62749ba85771b7221b855bc2bd261573c7.jpg",
+      "id": 12
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Marion",
+        "last": "Herrera"
+      },
+      "dob": {
+        "date": "1998-02-25T08:58:10.695Z",
+        "age": 24
+      },
+      "email": "marion.herrera@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 2826,
+          "name": "Thornridge Cir"
+        },
+        "city": "Mildura",
+        "state": "Western Australia",
+        "country": "Australia",
+        "postcode": 686,
+        "coordinates": {
+          "latitude": "-87.6722",
+          "longitude": "-41.9984"
+        },
+        "timezone": {
+          "offset": "-10:00",
+          "description": "Hawaii"
+        }
+      },
+      "cell": "0403-152-165",
+      "image": "https://content.fakeface.rest/female_47_e67d24867b6ba5141e2ec0e39a9da2c2c99899ce.jpg",
+      "id": 13
+    }
+  ]
 }
