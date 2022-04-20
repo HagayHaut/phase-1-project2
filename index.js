@@ -1,6 +1,10 @@
 // HTTP requests
+// GET random AI face
+// fetch('https://100k-faces.glitch.me/random-image-url')
+//     .then(resp => resp.json())
+//     .then(data => console.log(data))
 
-// GET request
+// GET request for user info
 function getUser() {
     fetch('https://randomuser.me/api/')
         .then(resp => resp.json())
@@ -45,6 +49,7 @@ function handleData(dataObj) {
         cell: dataObj.cell,
         image: 'https://100k-faces.glitch.me/random-image'
     }
+    
     postUser(user)
 }
 
@@ -58,11 +63,13 @@ function makeDate(date) {
 
 // Renders
 function renderMainUser(userObj) {
-    console.log(userObj)
     const container = document.querySelector('#licence-container')
-    console.log(container)
+    container.innerHTML = ''
+    const div = document.createElement('div')
+    div.className = 'main-info'
     const img = document.createElement('img')
     img.src = userObj.image;
+    img.className = 'main-img'
     const name = document.createElement('h2')
     name.textContent = `${userObj.name.first} ${userObj.name.last}`
     const location = document.createElement('h3')
@@ -73,11 +80,12 @@ function renderMainUser(userObj) {
     cell.textContent = `Cell: ${userObj.cell}`
     const dob = document.createElement('p')
     dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
-    container.append(name, location, img, gender, dob, cell)
+    div.append(name, location, gender, dob, cell)
+    container.append(div, img)
 }
 
 function addToUserList(userObj) {
-    
+
 }
 
 // Hello
