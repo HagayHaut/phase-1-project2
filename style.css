@@ -48,19 +48,25 @@
 #bottom-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  overflow: auto;
 }
 
 .card {
-  margin: auto;
+  /* display: flex; */
+  margin: 10px 10px 10px 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 20%;
+  width: 200px !important;
+  height: auto;
+  border: 2px solid gray;
   border-radius: 5px;
 }
 
 .card img {
   border-radius: 5px 5px 0 0;
-  width: 100%;
+  width: 200px;
+  height: auto;
+  display: block;
 }
 
 .card:hover {

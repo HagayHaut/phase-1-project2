@@ -24,6 +24,10 @@ function postUser(userObj) {
         .then(userObj => handleNewUser(userObj))
 }
 
+fetch('http://localhost:3000/users')
+    .then(resp => resp.json())
+    .then(data => handleUserList(data))
+
 // Global variables
 const btn = document.querySelector('#generate')
 
@@ -36,6 +40,10 @@ btn.addEventListener('click', getUser)
 function handleNewUser(userObj) {
     renderMainUser(userObj)
     addToUserList(userObj)
+}
+
+function handleUserList(userArray) {
+    userArray.forEach(userObj => addToUserList(userObj))
 }
 
 // Recieves data from API fetch
@@ -97,7 +105,6 @@ function renderMainUser(userObj) {
 // Adds rendered card to bottom container
 // Adds mouse events to each card
 function addToUserList(userObj) {
-    console.log(userObj)
     const container = document.querySelector('#bottom-container')
     const card = document.createElement('div')
     card.className = 'card'
@@ -117,7 +124,3 @@ function addToUserList(userObj) {
     card.append(div, img)
     container.prepend(card)
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> f8b40566e66c3d643927f99cab9164f202372095
