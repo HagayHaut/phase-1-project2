@@ -30,8 +30,6 @@ btn.addEventListener('click', getUser)
 // Handlers
 function handleNewUser(userObj) {
     renderMainUser(userObj)
-    // MAX: addToUserList will render each new user in list at bottom
-    // is declared below but empty
     addToUserList(userObj)
 }
 
@@ -102,8 +100,6 @@ function addToUserList(userObj) {
     img.src = userObj.image
     const p = document.createElement('p')
     p.textContent = `${userObj.location.city}, ${userObj.location.country}`
-    // card.addEventListener('onmouseover', () => showCardDetail(info))
-    // card.addEventListener('onmouseout', () => hideCardDetail(info))
     card.onmouseover = () => info.style.display = 'block';
     card.onmouseout = () => info.style.display = 'none';
     div.append(name,p,info)
@@ -111,20 +107,3 @@ function addToUserList(userObj) {
     container.prepend(card)
 }
 
-// function showCardDetail(info) {
-//     info.style.display = 'block'
-// }
-
-// function hideCardDetail(info) {
-//     info.style.display = 'none'
-// }
-
-// Hello
-
-
-
-// const img = document.createElement('img')
-// img.src = 'https://100k-faces.glitch.me/random-image'
-// document.querySelector('body').append(img)
-
-// Comment for demo
