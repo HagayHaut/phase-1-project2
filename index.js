@@ -69,7 +69,7 @@ function renderUser(userObj) {
     container.append(name, location, img, gender, dob, cell)
 }
 // Hello
-
+// Bye
 
 
 // const img = document.createElement('img')
