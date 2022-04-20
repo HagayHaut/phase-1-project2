@@ -1,8 +1,4 @@
 // HTTP requests
-// GET random AI face
-// fetch('https://100k-faces.glitch.me/random-image-url')
-//     .then(resp => resp.json())
-//     .then(data => console.log(data))
 
 // GET request for user info
 function getUser() {
@@ -40,18 +36,25 @@ function handleNewUser(userObj) {
 }
 
 function handleData(dataObj) {
-    const user = {
+    // GET request for unique AI face img
+    fetch('https://fakeface.rest/face/json')
+    .then(resp => resp.json())
+    .then(data => {
+        const user = {
         name: dataObj.name,
         dob: dataObj.dob,
         email: dataObj.email,
         gender: dataObj.gender,
         location: dataObj.location,
         cell: dataObj.cell,
-        image: 'https://100k-faces.glitch.me/random-image'
-    }
-    
-    postUser(user)
+        image: data.image_url
+      }  
+       postUser(user)
+    })
+   
 }
+  
+
 
 // prints date from date instance
 function makeDate(date) {
