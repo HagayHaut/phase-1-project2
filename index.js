@@ -1,6 +1,6 @@
 // HTTP requests
 
-// GET request
+// GET request for user info
 function getUser() {
     fetch('https://randomuser.me/api/')
         .then(resp => resp.json())
@@ -18,7 +18,7 @@ function postUser(userObj) {
         body: JSON.stringify(userObj)
     })
         .then(resp => resp.json())
-        .then(userObj => renderUser(userObj))
+        .then(userObj => handleNewUser(userObj))
 }
 
 // Global variables
@@ -28,18 +28,33 @@ const btn = document.querySelector('#generate')
 btn.addEventListener('click', getUser)
 
 // Handlers
+function handleNewUser(userObj) {
+    renderMainUser(userObj)
+    // MAX: addToUserList will render each new user in list at bottom
+    // is declared below but empty
+    addToUserList(userObj)
+}
+
 function handleData(dataObj) {
-    const user = {
+    // GET request for unique AI face img
+    fetch('https://fakeface.rest/face/json')
+    .then(resp => resp.json())
+    .then(data => {
+        const user = {
         name: dataObj.name,
         dob: dataObj.dob,
         email: dataObj.email,
         gender: dataObj.gender,
         location: dataObj.location,
         cell: dataObj.cell,
-        image: 'https://100k-faces.glitch.me/random-image'
-    }
-    postUser(user)
+        image: data.image_url
+      }  
+       postUser(user)
+    })
+   
 }
+  
+
 
 // prints date from date instance
 function makeDate(date) {
@@ -50,12 +65,14 @@ function makeDate(date) {
 }
 
 // Renders
-function renderUser(userObj) {
-    console.log(userObj)
+function renderMainUser(userObj) {
     const container = document.querySelector('#licence-container')
-    console.log(container)
+    container.innerHTML = ''
+    const div = document.createElement('div')
+    div.className = 'main-info'
     const img = document.createElement('img')
     img.src = userObj.image;
+    img.className = 'main-img'
     const name = document.createElement('h2')
     name.textContent = `${userObj.name.first} ${userObj.name.last}`
     const location = document.createElement('h3')
@@ -66,8 +83,14 @@ function renderUser(userObj) {
     cell.textContent = `Cell: ${userObj.cell}`
     const dob = document.createElement('p')
     dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
-    container.append(name, location, img, gender, dob, cell)
+    div.append(name, location, gender, dob, cell)
+    container.append(div, img)
 }
+
+function addToUserList(userObj) {
+
+}
+
 // Hello
 // Bye
 
