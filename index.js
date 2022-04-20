@@ -1,6 +1,7 @@
 // HTTP requests
 
 // GET request for user info
+// send to data handler
 function getUser() {
     fetch('https://randomuser.me/api/')
         .then(resp => resp.json())
@@ -8,6 +9,8 @@ function getUser() {
 }
 
 // POST request
+// post user data in db.json
+// pessimistically send response data to handleNewUser
 function postUser(userObj) {
     fetch('http://localhost:3000/users', {
         method: 'POST',
@@ -28,6 +31,8 @@ const btn = document.querySelector('#generate')
 btn.addEventListener('click', getUser)
 
 // Handlers
+// takes in response from db.json
+// pessimistically renders in top and bottom container
 function handleNewUser(userObj) {
     renderMainUser(userObj)
     // MAX: addToUserList will render each new user in list at bottom
@@ -35,25 +40,28 @@ function handleNewUser(userObj) {
     addToUserList(userObj)
 }
 
+// Recieves data from API fetch
 function handleData(dataObj) {
     // GET request for unique AI face img
+    // Defining user obj within .then (async)
+    // Sending user obj to postUser
     fetch('https://fakeface.rest/face/json')
-    .then(resp => resp.json())
-    .then(data => {
-        const user = {
-        name: dataObj.name,
-        dob: dataObj.dob,
-        email: dataObj.email,
-        gender: dataObj.gender,
-        location: dataObj.location,
-        cell: dataObj.cell,
-        image: data.image_url
-      }  
-       postUser(user)
-    })
-   
+        .then(resp => resp.json())
+        .then(data => {
+            const user = {
+                name: dataObj.name,
+                dob: dataObj.dob,
+                email: dataObj.email,
+                gender: dataObj.gender,
+                location: dataObj.location,
+                cell: dataObj.cell,
+                image: data.image_url
+            }
+            postUser(user)
+        })
+
 }
-  
+
 
 
 // prints date from date instance
@@ -65,6 +73,7 @@ function makeDate(date) {
 }
 
 // Renders
+// Renders the main user card in top container
 function renderMainUser(userObj) {
     const container = document.querySelector('#licence-container')
     container.innerHTML = ''
@@ -87,31 +96,28 @@ function renderMainUser(userObj) {
     container.append(div, img)
 }
 
+// Adds rendered card to bottom container
+// Adds mouse events to each card
 function addToUserList(userObj) {
     console.log(userObj)
     const container = document.querySelector('#bottom-container')
     const card = document.createElement('div')
+    card.className = 'card'
     const div = document.createElement('div')
     const img = document.createElement('img')
+    const name = document.createElement('h4')
+    const info = document.createElement('div')
+    info.innerHTML = `<p>Gender: ${userObj.gender}</p><p>DOB: ${makeDate(userObj.dob.date)}</p><p>Cell: ${userObj.cell}</p>`
+    info.style.display = 'none'
+    name.textContent = `${userObj.name.first} ${userObj.name.last}`
     img.src = userObj.image
     const p = document.createElement('p')
     p.textContent = `${userObj.location.city}, ${userObj.location.country}`
-    card.addEventListener('mouseover', () => showDetail(userObj))
-    div.append(p)
-    card.append(div,img)
-    container.append(card)
+    // card.addEventListener('onmouseover', () => showCardDetail(info))
+    // card.addEventListener('onmouseout', () => hideCardDetail(info))
+    card.onmouseover = () => info.style.display = 'block';
+    card.onmouseout = () => info.style.display = 'none';
+    div.append(name, p, info)
+    card.append(div, img)
+    container.prepend(card)
 }
-
-function showDetail(userObj) {
-
-}
-
-// Hello
-// Bye
-
-
-// const img = document.createElement('img')
-// img.src = 'https://100k-faces.glitch.me/random-image'
-// document.querySelector('body').append(img)
-
-// Comment for demo
