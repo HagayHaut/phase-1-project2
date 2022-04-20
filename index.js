@@ -88,6 +88,21 @@ function renderMainUser(userObj) {
 }
 
 function addToUserList(userObj) {
+    console.log(userObj)
+    const container = document.querySelector('#bottom-container')
+    const card = document.createElement('div')
+    const div = document.createElement('div')
+    const img = document.createElement('img')
+    img.src = userObj.image
+    const p = document.createElement('p')
+    p.textContent = `${userObj.location.city}, ${userObj.location.country}`
+    card.addEventListener('mouseover', () => showDetail(userObj))
+    div.append(p)
+    card.append(div,img)
+    container.append(card)
+}
+
+function showDetail(userObj) {
 
 }
 
