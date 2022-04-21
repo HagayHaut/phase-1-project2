@@ -148,6 +148,7 @@ function renderMainUser(userObj) {
     const gender = document.createElement('p')
     const cell = document.createElement('p')
     const dob = document.createElement('p')
+    // clear main user from #licence-container
     container.innerHTML = ''
     // spill object data to tags
     div.className = 'main-info'
