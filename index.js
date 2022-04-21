@@ -76,17 +76,15 @@ function deleteAllRequest(e) {
 // Global variables
 const btn = document.querySelector('#generate')
 const deleteAllBtn = document.querySelector('#deleteAll')
-//gets current date and parses
+
+//gets current date and parses to mm/dd string
+// vairable storing today's date
 const today = new Date();
 const dd = String(today.getDate()).padStart(2, '0');
 const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-const yyyy = today.getFullYear();
-// stores current date as string to check birthdays
+
+// stores current date as string to check birthdays during render
 const todayStr = `${mm}/${dd}`
-
-
-
-// vairable storing today's date
 
 // Global event listeners
 btn.addEventListener('click', getUser)
@@ -101,7 +99,9 @@ function handleNewUser(userObj) {
     addToUserList(userObj)
 }
 
+// Renders card list and most recent user on page load
 function handleUserList(userArray) {
+    renderMainUser(userArray[userArray.length-1])
     userArray.forEach(userObj => addToUserList(userObj))
 }
 
@@ -128,7 +128,7 @@ function handleData(dataObj) {
 
 
 
-// prints date from date instance
+// converts date instance to mm/dd/yyyy string
 function makeDate(date) {
     const days = date.substr(8, 2)
     const year = date.substr(0, 4)
@@ -139,30 +139,34 @@ function makeDate(date) {
 // Renders
 // Renders the main user card in top container
 function renderMainUser(userObj) {
+    // make tags
     const container = document.querySelector('#licence-container')
-    container.innerHTML = ''
     const div = document.createElement('div')
-    div.className = 'main-info'
     const img = document.createElement('img')
+    const name = document.createElement('h2')
+    const location = document.createElement('h3')
+    const gender = document.createElement('p')
+    const cell = document.createElement('p')
+    const dob = document.createElement('p')
+    container.innerHTML = ''
+    // spill object data to tags
+    div.className = 'main-info'
     img.src = userObj.image;
     img.className = 'main-img'
-    const name = document.createElement('h2')
     name.textContent = `${userObj.name.first} ${userObj.name.last}`
-    const location = document.createElement('h3')
     location.textContent = `${userObj.location.city}, ${userObj.location.state}, ${userObj.location.country}`
-    const gender = document.createElement('p')
     gender.textContent = `Gender: ${userObj.gender}`
-    const cell = document.createElement('p')
     cell.textContent = `Cell: ${userObj.cell}`
-    const dob = document.createElement('p')
     dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
+    // check birthday
     if(makeDate(userObj.dob.date).slice(0,5) === todayStr) {
-       container.style.backgroundColor = 'gold'
-       dob.textContent += ' IT\'S MY BIRTHDAY'
+       container.style.backgroundColor = '#a67c00'
+       dob.textContent += ' IT\'S MY BIRTHDAY!'
     }
     else {
         container.style.backgroundColor = '#7F9183'
     }
+    // append to DOM
     div.append(name, location, gender, dob, cell)
     container.append(img, div)
 }
@@ -196,7 +200,7 @@ function addToUserList(userObj) {
     p.textContent = `${userObj.location.city}, ${userObj.location.country}`
     // checks for birthday
     if(makeDate(userObj.dob.date).slice(0,5) === todayStr) {
-        card.style.backgroundColor = 'gold'
+        card.style.backgroundColor = '#a67c00'
         info.innerHTML += ' IT\'S MY BIRTHDAY!'
      }
      else {
@@ -207,21 +211,9 @@ function addToUserList(userObj) {
     card.onmouseover = () => info.style.display = 'block';
     card.onmouseout = () => info.style.display = 'none';
     card.onclick = () => renderMainUser(userObj);
-    // card.addEventListener('dragstart', dragStart)
-    // card.addEventListener('dragend', dragEnd)
     //append
     div.append(name, trash, p, info)
     card.append(div, img)
     card.draggable = 'false'
     container.prepend(card)
 }
-
-// Drag event callbacks
-// function dragStart(e) {
-//     this.className += ' hold';
-    // this.style.display = 'none'
-// }
-
-// function dragEnd(e) {
-//     console.log('end')
-// }
