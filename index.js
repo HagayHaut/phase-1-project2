@@ -229,7 +229,7 @@ function addToUserList(userObj) {
     trash.onclick = (e) => deleteRequest(e.target.parentNode.parentNode)
     card.onmouseover = () => info.style.display = 'block';
     card.onmouseout = () => info.style.display = 'none';
-    card.onclick = () => renderMainUser(userObj);
+    img.onclick = () => renderMainUser(userObj);
     //append
     div.append(name, trash, p, info)
     card.append(div, img)
