@@ -105,7 +105,7 @@ btn.addEventListener('click', getUser)
 deleteAllBtn.addEventListener('click', deleteAllRequest)
 
 // render current user count
-humanCount.textContent = Array.from(cardList).length;
+// humanCount.textContent = Array.from(cardList).length;
 
 // Handlers
 // takes in response from db.json
