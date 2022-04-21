@@ -11,7 +11,9 @@ function getUser() {
 // GET users from db.json for bottom list
 fetch('http://localhost:3000/users')
     .then(resp => resp.json())
-    .then(data => handleUserList(data))
+    .then(data => {
+        handleUserList(data);
+    })
 
 // POST request
 // post user data in db.json
@@ -41,6 +43,7 @@ function deleteRequest(card) {
         .then(resp => resp.json())
         .then(data => {
             card.remove()
+            countSpan.textContent = --count;
         })
 }
 
@@ -70,12 +73,23 @@ function deleteAllRequest(e) {
             // optimistically delete contents of containers on 
             document.querySelector('#bottom-container').innerHTML = ''
             document.querySelector('#licence-container').innerHTML = ''
+            count = 0;
+            countSpan.textContent = count;
         })
 }
 
 // Global variables
 const btn = document.querySelector('#generate')
 const deleteAllBtn = document.querySelector('#deleteAll')
+// const cardListContainer = document.querySelector('#bottom-container')
+// const cardList = cardListContainer.querySelectorAll('.card')
+// const humanCount = document.querySelector('#human-count')
+// console.log(cardList)
+// console.log(Array.from(cardList))
+
+const countSpan = document.querySelector('#human-count')
+
+let count = 0;
 
 //gets current date and parses to mm/dd string
 // vairable storing today's date
@@ -90,6 +104,8 @@ const todayStr = `${mm}/${dd}`
 btn.addEventListener('click', getUser)
 deleteAllBtn.addEventListener('click', deleteAllRequest)
 
+// render current user count
+humanCount.textContent = Array.from(cardList).length;
 
 // Handlers
 // takes in response from db.json
@@ -175,6 +191,8 @@ function renderMainUser(userObj) {
 // Adds rendered card to bottom container
 // Adds mouse events to each card
 function addToUserList(userObj) {
+    // increment list count
+    countSpan.textContent = ++count;
     // variables
     const container = document.querySelector('#bottom-container')
     const card = document.createElement('div')
