@@ -155,13 +155,14 @@ function renderMainUser(userObj) {
     const cell = document.createElement('p')
     cell.textContent = `Cell: ${userObj.cell}`
     const dob = document.createElement('p')
+    dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
     if(makeDate(userObj.dob.date).slice(0,5) === todayStr) {
        container.style.backgroundColor = 'gold'
+       dob.textContent += ' IT\'S MY BIRTHDAY'
     }
     else {
         container.style.backgroundColor = '#7F9183'
     }
-    dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
     div.append(name, location, gender, dob, cell)
     container.append(img, div)
 }
@@ -196,6 +197,7 @@ function addToUserList(userObj) {
     // checks for birthday
     if(makeDate(userObj.dob.date).slice(0,5) === todayStr) {
         card.style.backgroundColor = 'gold'
+        info.innerHTML += ' IT\'S MY BIRTHDAY!'
      }
      else {
          card.style.backgroundColor = '#7F9183'
