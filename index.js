@@ -32,7 +32,6 @@ function postUser(userObj) {
 // DELETE request
 function deleteRequest(card) {
     const id = card.querySelector('img').id
-    console.log(id)
     fetch(`http://localhost:3000/users/${id}`, {
         method: 'DELETE',
         headers: {
