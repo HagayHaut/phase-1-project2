@@ -76,6 +76,17 @@ function deleteAllRequest(e) {
 // Global variables
 const btn = document.querySelector('#generate')
 const deleteAllBtn = document.querySelector('#deleteAll')
+//gets current date and parses
+const today = new Date();
+const dd = String(today.getDate()).padStart(2, '0');
+const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+const yyyy = today.getFullYear();
+// stores current date as string to check birthdays
+const todayStr = `${mm}/${dd}`
+
+
+
+// vairable storing today's date
 
 // Global event listeners
 btn.addEventListener('click', getUser)
@@ -144,6 +155,12 @@ function renderMainUser(userObj) {
     const cell = document.createElement('p')
     cell.textContent = `Cell: ${userObj.cell}`
     const dob = document.createElement('p')
+    if(makeDate(userObj.dob.date).slice(0,5) === todayStr) {
+       container.style.backgroundColor = 'gold'
+    }
+    else {
+        container.style.backgroundColor = '#7F9183'
+    }
     dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
     div.append(name, location, gender, dob, cell)
     container.append(img, div)
@@ -176,6 +193,13 @@ function addToUserList(userObj) {
     img.src = userObj.image
     const p = document.createElement('p')
     p.textContent = `${userObj.location.city}, ${userObj.location.country}`
+    // checks for birthday
+    if(makeDate(userObj.dob.date).slice(0,5) === todayStr) {
+        card.style.backgroundColor = 'gold'
+     }
+     else {
+         card.style.backgroundColor = '#7F9183'
+     }
     // events
     trash.onclick = (e) => deleteRequest(e.target.parentNode.parentNode)
     card.onmouseover = () => info.style.display = 'block';
