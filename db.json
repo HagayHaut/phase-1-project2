@@ -1,3 +1,174 @@
 {
-"users": []
+  "users": [
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Mariano",
+        "last": "Iglesias"
+      },
+      "dob": {
+        "date": "1975-03-18T23:56:54.097Z",
+        "age": 47
+      },
+      "email": "mariano.iglesias@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 6879,
+          "name": "Avenida de América"
+        },
+        "city": "Torrente",
+        "state": "País Vasco",
+        "country": "Spain",
+        "postcode": 94520,
+        "coordinates": {
+          "latitude": "-24.0019",
+          "longitude": "-8.3241"
+        },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "cell": "649-043-075",
+      "image": "https://content.fakeface.rest/male_66_075d69b7040a6e0b39bb821e2220bc7a73795c5d.jpg",
+      "id": 1
+    },
+    {
+      "name": {
+        "title": "Mrs",
+        "first": "Aubree",
+        "last": "Brar"
+      },
+      "dob": {
+        "date": "1976-03-05T01:08:56.115Z",
+        "age": 46
+      },
+      "email": "aubree.brar@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 9784,
+          "name": "College Ave"
+        },
+        "city": "Vanier",
+        "state": "New Brunswick",
+        "country": "Canada",
+        "postcode": "V8P 1S4",
+        "coordinates": {
+          "latitude": "-58.7497",
+          "longitude": "178.2011"
+        },
+        "timezone": {
+          "offset": "+5:00",
+          "description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+        }
+      },
+      "cell": "236-755-3049",
+      "image": "https://content.fakeface.rest/male_46_6d04a46277eda9043ef8cef69131af402b1e3546.jpg",
+      "id": 2
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Hector",
+        "last": "Faure"
+      },
+      "dob": {
+        "date": "1976-06-21T07:16:22.054Z",
+        "age": 46
+      },
+      "email": "hector.faure@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 3398,
+          "name": "Rue Pierre-Delore"
+        },
+        "city": "Dunkerque",
+        "state": "Mayotte",
+        "country": "France",
+        "postcode": 17781,
+        "coordinates": {
+          "latitude": "3.1382",
+          "longitude": "-50.8104"
+        },
+        "timezone": {
+          "offset": "-7:00",
+          "description": "Mountain Time (US & Canada)"
+        }
+      },
+      "cell": "06-36-14-32-84",
+      "image": "https://content.fakeface.rest/female_29_77f289f351bdddd2a8c8ad6b4e30c64bda0c5f05.jpg",
+      "id": 3
+    },
+    {
+      "name": {
+        "title": "Miss",
+        "first": "Tora",
+        "last": "Tjøstheim"
+      },
+      "dob": {
+        "date": "1968-05-23T20:59:36.074Z",
+        "age": 54
+      },
+      "email": "tora.tjostheim@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 6950,
+          "name": "Agronomveien"
+        },
+        "city": "Neskollen",
+        "state": "Description",
+        "country": "Norway",
+        "postcode": "2256",
+        "coordinates": {
+          "latitude": "56.4359",
+          "longitude": "47.2345"
+        },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "cell": "41494309",
+      "image": "https://content.fakeface.rest/female_10_7536b230f2df0aee3a39ca2c36158defa78aa7aa.jpg",
+      "id": 4
+    },
+    {
+      "name": {
+        "title": "Miss",
+        "first": "Özsu",
+        "last": "Atan"
+      },
+      "dob": {
+        "date": "1964-10-01T01:07:12.271Z",
+        "age": 58
+      },
+      "email": "ozsu.atan@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 7573,
+          "name": "Istiklal Cd"
+        },
+        "city": "Bayburt",
+        "state": "Ağrı",
+        "country": "Turkey",
+        "postcode": 16337,
+        "coordinates": {
+          "latitude": "70.5168",
+          "longitude": "62.7942"
+        },
+        "timezone": {
+          "offset": "+9:00",
+          "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+        }
+      },
+      "cell": "(791)-197-3127",
+      "image": "https://content.fakeface.rest/female_45_5974dd1ee783bfdcdad6add3b915e031fe0e687c.jpg",
+      "id": 5
+    }
+  ]
 }
