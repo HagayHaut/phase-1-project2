@@ -180,6 +180,7 @@ function addToUserList(userObj) {
     trash.onclick = (e) => deleteRequest(e.target.parentNode.parentNode)
     card.onmouseover = () => info.style.display = 'block';
     card.onmouseout = () => info.style.display = 'none';
+    card.onclick = () => renderMainUser(userObj);
     // card.addEventListener('dragstart', dragStart)
     // card.addEventListener('dragend', dragEnd)
     //append
