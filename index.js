@@ -102,7 +102,6 @@ function handleData(dataObj) {
     fetch('https://fakeface.rest/face/json')
         .then(resp => resp.json())
         .then(data => {
-            console.log(data)
             const user = {
                 name: dataObj.name,
                 dob: dataObj.dob,
