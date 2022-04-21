@@ -17,6 +17,9 @@
   margin-left: auto;
   margin-right: auto;
 } */
+html {
+  background-color: #DDD5D0;
+}
 
 body {
   scrollbar-width: thin;
@@ -68,15 +71,16 @@ header h1 {
 
 #licence-container {
   margin: auto;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 40%;
   border-radius: 10px;
   border: 2px solid gray;
+  background-color: #7F9183;
 }
 
-#licence-container:hover{
-  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+#licence-container:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main-img {
@@ -90,6 +94,7 @@ header h1 {
 
 button {
   cursor: pointer;
+  background-color: #CFC0BD;
 }
 
 #bottom-container {
@@ -104,7 +109,7 @@ button {
   /* display: flex; */
   margin: 10px 10px 10px 10px;
   /* position:absolute; */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 200px;
   /* height: auto; */
   border: 2px solid gray;
@@ -123,7 +128,9 @@ button {
 }
 
 .card:hover {
-  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: #586F6B;
+  transition: all 0.5s ease-in-out
 }
 
 .hold {
