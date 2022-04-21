@@ -26,6 +26,37 @@ body {
   scrollbar-color: black gray;
 }
 
+header {
+  background-color: #586f6b;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-family: Impact;
+  font-size: 3.5vw;
+  color: #CFC0BD;
+  margin: 5px 10px 5px 10px;
+}
+
+#oval {
+  width: 20%;
+  height: 2%;
+  background: #CFC0BD;
+  border-radius: 90px;
+  margin: 5px 20px 5px 10px;
+}
+
+#company {
+  font-family: 'Trebuchet MS';
+  font-size: 2.5vw;
+  color: #ddd5d0;
+  margin-left: 18px;
+  color:  #586f6b;
+}
+
 #top {
   display: flex;
   flex-direction: row;
@@ -43,7 +74,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 40%;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 2px solid gray;
   background-color: #7F9183;
 }
@@ -69,7 +100,7 @@ button {
 #bottom-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   overflow: auto;
   transform: rotateX(180deg)
 }
