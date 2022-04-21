@@ -3093,6 +3093,40 @@
       "cell": "(548)-944-9123",
       "image": "https://content.fakeface.rest/female_10_12d7cb654ce6aceaec968ba4f1228c1bd1c8442d.jpg",
       "id": 98
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Bill",
+        "last": "Ellis"
+      },
+      "dob": {
+        "date": "1987-10-23T01:49:10.296Z",
+        "age": 35
+      },
+      "email": "bill.ellis@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 6086,
+          "name": "Park Avenue"
+        },
+        "city": "Chester",
+        "state": "Gloucestershire",
+        "country": "United Kingdom",
+        "postcode": "MM0 0BW",
+        "coordinates": {
+          "latitude": "7.3044",
+          "longitude": "-67.8694"
+        },
+        "timezone": {
+          "offset": "-6:00",
+          "description": "Central Time (US & Canada), Mexico City"
+        }
+      },
+      "cell": "0702-544-902",
+      "image": "https://content.fakeface.rest/male_15_9b12bb3331f367055ceb993faf08e86370438d92.jpg",
+      "id": 99
     }
   ]
 }
