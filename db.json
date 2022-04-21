@@ -169,6 +169,74 @@
       "cell": "(791)-197-3127",
       "image": "https://content.fakeface.rest/female_45_5974dd1ee783bfdcdad6add3b915e031fe0e687c.jpg",
       "id": 5
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Arttu",
+        "last": "Peura"
+      },
+      "dob": {
+        "date": "1972-01-01T01:27:43.352Z",
+        "age": 51
+      },
+      "email": "arttu.peura@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 4731,
+          "name": "Tehtaankatu"
+        },
+        "city": "Heinola",
+        "state": "Päijät-Häme",
+        "country": "Finland",
+        "postcode": 10011,
+        "coordinates": {
+          "latitude": "-5.6020",
+          "longitude": "-14.0432"
+        },
+        "timezone": {
+          "offset": "+5:30",
+          "description": "Bombay, Calcutta, Madras, New Delhi"
+        }
+      },
+      "cell": "041-401-08-80",
+      "image": "https://content.fakeface.rest/male_58_0ac9ff1a0e8ca94bc986e03e299482eafa8bc06e.jpg",
+      "id": 6
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Milan",
+        "last": "Abdallah"
+      },
+      "dob": {
+        "date": "1945-05-12T13:27:39.462Z",
+        "age": 77
+      },
+      "email": "milan.abdallah@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 7080,
+          "name": "Jutulveien"
+        },
+        "city": "Svenevik",
+        "state": "Trøndelag",
+        "country": "Norway",
+        "postcode": "0202",
+        "coordinates": {
+          "latitude": "51.5799",
+          "longitude": "-32.4468"
+        },
+        "timezone": {
+          "offset": "-12:00",
+          "description": "Eniwetok, Kwajalein"
+        }
+      },
+      "cell": "90992894",
+      "image": "https://content.fakeface.rest/male_42_31393235f15d07db56c6a4704c411e2011beef58.jpg",
+      "id": 7
     }
   ]
 }
