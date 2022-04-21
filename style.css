@@ -120,7 +120,7 @@ button {
 
 #bottom-container::-webkit-scrollbar {
   width: 1px;
-  /* background-color: #586f6b; */
+  background-color: #586f6b;
 }
 
 

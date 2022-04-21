@@ -193,6 +193,13 @@ function addToUserList(userObj) {
     img.src = userObj.image
     const p = document.createElement('p')
     p.textContent = `${userObj.location.city}, ${userObj.location.country}`
+    // checks for birthday
+    if(makeDate(userObj.dob.date).slice(0,5) === todayStr) {
+        card.style.backgroundColor = 'gold'
+     }
+     else {
+         card.style.backgroundColor = '#7F9183'
+     }
     // events
     trash.onclick = (e) => deleteRequest(e.target.parentNode.parentNode)
     card.onmouseover = () => info.style.display = 'block';
