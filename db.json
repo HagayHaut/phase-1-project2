@@ -1,3 +1,276 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Ricardo",
+        "last": "Wood"
+      },
+      "dob": {
+        "date": "1960-02-13T07:11:02.887Z",
+        "age": 62
+      },
+      "email": "ricardo.wood@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 1034,
+          "name": "Windsor Road"
+        },
+        "city": "Canterbury",
+        "state": "Dyfed",
+        "country": "United Kingdom",
+        "postcode": "CZ57 7DZ",
+        "coordinates": {
+          "latitude": "11.3756",
+          "longitude": "-100.2990"
+        },
+        "timezone": {
+          "offset": "+5:00",
+          "description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+        }
+      },
+      "cell": "0752-534-739",
+      "image": "https://content.fakeface.rest/female_33_a04202ae3cd72f1867c923a3bb60d38977f452f2.jpg",
+      "id": 1
+    },
+    {
+      "name": {
+        "title": "Ms",
+        "first": "Maja",
+        "last": "Andersen"
+      },
+      "dob": {
+        "date": "1981-11-26T06:51:14.137Z",
+        "age": 41
+      },
+      "email": "maja.andersen@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 5591,
+          "name": "Nørrevej"
+        },
+        "city": "Saltum",
+        "state": "Danmark",
+        "country": "Denmark",
+        "postcode": 32209,
+        "coordinates": {
+          "latitude": "-29.6224",
+          "longitude": "146.6118"
+        },
+        "timezone": {
+          "offset": "+2:00",
+          "description": "Kaliningrad, South Africa"
+        }
+      },
+      "cell": "38347120",
+      "image": "https://content.fakeface.rest/female_32_2bc022f996ac17262557049f5c69d22c5df06fd8.jpg",
+      "id": 2
+    },
+    {
+      "name": {
+        "title": "Miss",
+        "first": "Julianne",
+        "last": "Hernes"
+      },
+      "dob": {
+        "date": "1981-10-01T16:06:51.806Z",
+        "age": 41
+      },
+      "email": "julianne.hernes@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 671,
+          "name": "Karen Platous vei"
+        },
+        "city": "Hundorp",
+        "state": "Akershus",
+        "country": "Norway",
+        "postcode": "3222",
+        "coordinates": {
+          "latitude": "49.8624",
+          "longitude": "121.2944"
+        },
+        "timezone": {
+          "offset": "+7:00",
+          "description": "Bangkok, Hanoi, Jakarta"
+        }
+      },
+      "cell": "91061562",
+      "image": "https://content.fakeface.rest/female_11_5d2bedabad359bbb7dc0df0651af8f5ff78c0929.jpg",
+      "id": 3
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Timeo",
+        "last": "Roy"
+      },
+      "dob": {
+        "date": "1987-04-22T18:27:11.441Z",
+        "age": 35
+      },
+      "email": "timeo.roy@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 7848,
+          "name": "Rue du Bon-Pasteur"
+        },
+        "city": "Roubaix",
+        "state": "Essonne",
+        "country": "France",
+        "postcode": 66704,
+        "coordinates": {
+          "latitude": "2.2372",
+          "longitude": "-159.9524"
+        },
+        "timezone": {
+          "offset": "-6:00",
+          "description": "Central Time (US & Canada), Mexico City"
+        }
+      },
+      "cell": "06-30-54-20-44",
+      "image": "https://content.fakeface.rest/female_11_eb12597bc0a7277f10a386becc757c64b251abe3.jpg",
+      "id": 4
+    },
+    {
+      "name": {
+        "title": "Ms",
+        "first": "Matilda",
+        "last": "Waisanen"
+      },
+      "dob": {
+        "date": "1977-06-24T19:37:15.534Z",
+        "age": 45
+      },
+      "email": "matilda.waisanen@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 5607,
+          "name": "Bulevardi"
+        },
+        "city": "Kitee",
+        "state": "Southern Ostrobothnia",
+        "country": "Finland",
+        "postcode": 29734,
+        "coordinates": {
+          "latitude": "-6.3160",
+          "longitude": "123.8594"
+        },
+        "timezone": {
+          "offset": "+5:45",
+          "description": "Kathmandu"
+        }
+      },
+      "cell": "044-515-17-33",
+      "image": "https://content.fakeface.rest/female_34_e5711722a8e969918d1e1c39ebdf5b690818e2c3.jpg",
+      "id": 5
+    },
+    {
+      "name": {
+        "title": "Mrs",
+        "first": "Camille",
+        "last": "Roche"
+      },
+      "dob": {
+        "date": "1951-02-12T06:34:32.339Z",
+        "age": 71
+      },
+      "email": "camille.roche@example.com",
+      "gender": "female",
+      "location": {
+        "street": {
+          "number": 2292,
+          "name": "Montée du Chemin-Neuf"
+        },
+        "city": "Toulon",
+        "state": "Haute-Savoie",
+        "country": "France",
+        "postcode": 91244,
+        "coordinates": {
+          "latitude": "-1.1595",
+          "longitude": "166.7184"
+        },
+        "timezone": {
+          "offset": "+11:00",
+          "description": "Magadan, Solomon Islands, New Caledonia"
+        }
+      },
+      "cell": "06-07-07-55-20",
+      "image": "https://content.fakeface.rest/female_9_6bc9858eb473aa338171f067ebab2d2922ee1135.jpg",
+      "id": 6
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Varg",
+        "last": "Landro"
+      },
+      "dob": {
+        "date": "1950-01-31T19:47:53.116Z",
+        "age": 72
+      },
+      "email": "varg.landro@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 5757,
+          "name": "Henrik Klausens gate"
+        },
+        "city": "Hellvik",
+        "state": "Hedmark",
+        "country": "Norway",
+        "postcode": "6087",
+        "coordinates": {
+          "latitude": "54.5757",
+          "longitude": "-162.3946"
+        },
+        "timezone": {
+          "offset": "+9:00",
+          "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+        }
+      },
+      "cell": "44232055",
+      "image": "https://content.fakeface.rest/male_49_ae00c963cc931fc6fbb00a8f1cdbba915510a410.jpg",
+      "id": 7
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Cristian",
+        "last": "Martin"
+      },
+      "dob": {
+        "date": "1963-06-26T10:32:13.623Z",
+        "age": 59
+      },
+      "email": "cristian.martin@example.com",
+      "gender": "male",
+      "location": {
+        "street": {
+          "number": 8626,
+          "name": "Paseo de Extremadura"
+        },
+        "city": "Pamplona",
+        "state": "Región de Murcia",
+        "country": "Spain",
+        "postcode": 31186,
+        "coordinates": {
+          "latitude": "-18.0881",
+          "longitude": "-60.3313"
+        },
+        "timezone": {
+          "offset": "-8:00",
+          "description": "Pacific Time (US & Canada)"
+        }
+      },
+      "cell": "606-490-941",
+      "image": "https://content.fakeface.rest/male_34_af72044c778a2e53b634c07be505917d9bc238b2.jpg",
+      "id": 8
+    }
+  ]
 }

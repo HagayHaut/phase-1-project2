@@ -32,7 +32,6 @@ function postUser(userObj) {
 // DELETE request
 function deleteRequest(card) {
     const id = card.querySelector('img').id
-    console.log(id)
     fetch(`http://localhost:3000/users/${id}`, {
         method: 'DELETE',
         headers: {
@@ -148,7 +147,7 @@ function renderMainUser(userObj) {
     const dob = document.createElement('p')
     dob.textContent = `DOB: ${makeDate(userObj.dob.date)}`
     div.append(name, location, gender, dob, cell)
-    container.append(div, img)
+    container.append(img, div)
 }
 
 // Adds rendered card to bottom container
@@ -182,8 +181,8 @@ function addToUserList(userObj) {
     trash.onclick = (e) => deleteRequest(e.target.parentNode.parentNode)
     card.onmouseover = () => info.style.display = 'block';
     card.onmouseout = () => info.style.display = 'none';
-    card.addEventListener('dragstart', dragStart)
-    card.addEventListener('dragend', dragEnd)
+    // card.addEventListener('dragstart', dragStart)
+    // card.addEventListener('dragend', dragEnd)
     //append
     div.append(name, trash, p, info)
     card.append(div, img)
@@ -192,11 +191,11 @@ function addToUserList(userObj) {
 }
 
 // Drag event callbacks
-function dragStart(e) {
-    this.className += ' hold';
+// function dragStart(e) {
+//     this.className += ' hold';
     // this.style.display = 'none'
-}
+// }
 
-function dragEnd(e) {
-    console.log('end')
-}
+// function dragEnd(e) {
+//     console.log('end')
+// }
